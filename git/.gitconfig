@@ -1,0 +1,47 @@
+[http]
+  sslVerify = true
+
+[user]
+  name = Andrea Villela
+  email = andrea@villela.co
+  signingkey = CC46D21B3F6BF388C5887660E38BBC93653C8F69
+
+[color]
+  ui = true
+
+[log]
+  decorate = auto
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  pager = delta --plus-color="#50fa7b" --minus-color="#ff80bf" --theme='Dracula'
+
+[diff]
+  tool = vimdiff
+
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+
+[mergetool]
+  keepBackup = true
+  prompt = false
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  program = gpg
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[push]
+  default = current
