@@ -49,13 +49,9 @@ stow:
 development:
 	sh ~/dotfile/dev/npm.sh
 	sh ~/dotfile/dev/pip.sh
-	sh ~/dotfile/dev/code.sh
-	sh ~/dotfile/fonts/fonts.sh
 
 node:
-	git clone https://github.com/nvm-sh/nvm.git .nvm
-	cd ~/.nvm
-	. nvm.sh
+	wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 ycm:
 	git clone https://github.com/ycm-core/ycmd.git ~/ycmd
